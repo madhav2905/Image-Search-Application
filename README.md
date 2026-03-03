@@ -92,10 +92,81 @@ IMAGE SEARCH APP/
 │   ├── generate_metadata.py
 │   ├── genrate_embeddings.py
 │   ├── search_metadata.py
-│   └── evaluate_performance.py
+│   └── eval.py
 ├── app.py                  # Streamlit UI
 ├── main.py                 # Project Orchestrator
 └── requirements.txt        # Dependencies
 ```
+
+---
+
+## Installation & Usage
+
+### Prerequisites
+
+- Python 3.9+
+
+### Setup
+
+```bash
+git clone https://github.com/your-username/yolo-resnet-search.git
+cd yolo-resnet-search
+python -m venv venv
+source venv/bin/activate   # Mac/Linux
+# venv\Scripts\activate    # Windows
+pip install -r requirements.txt
+```
+
+### Usage
+
+The project includes a central `main.py` to orchestrate all tasks.
+
+###  Initialize the Index  
+Processes images and builds the vector database.
+
+```bash
+python main.py index
+```
+
+This runs:
+- YOLO metadata generation
+- ResNet50 embedding extraction
+- FAISS index building
+
+### Launch the App  
+Starts the Streamlit web interface.
+
+```bash
+python main.py run
+```
+
+Or directly:
+
+```bash
+streamlit run app.py
+```
+
+### Run Evaluation  
+Generates the performance metrics report.
+
+```bash
+python main.py eval
+```
+
+Outputs:
+- Mean Precision@K
+- Mean Recall@K
+- mAP
+- Average similarity distance
+
+---
+
+## License
+This project is open source and available under the MIT License.
+
+---
+
+## Contact
+For questions or collaborations, feel free to open an issue or reach out!
 
 ---
