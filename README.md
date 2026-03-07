@@ -1,6 +1,9 @@
 # YOLO Hybrid Image Search Engine
 A hybrid image retrieval system that combines **YOLOv11 object-aware filtering** with **ResNet50 global visual embeddings** and **FAISS similarity search** to enable intelligent, scene-level and object-level image search.
 
+## Live Demo
+https://github.com/user-attachments/assets/ed5490a0-e82d-4c60-812d-797da68691c0
+
 ---
 
 ## Dataset
